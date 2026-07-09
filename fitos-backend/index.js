@@ -23,6 +23,8 @@ app.use(cors({
     'https://fitos.in',
     'https://www.fitos.in',
     'https://master.fitos.in',
+    'https://fitos-lilac.vercel.app',
+    'https://www.fitos-lilac.vercel.app',
     'http://localhost:5173',
   ],
   credentials: true,
@@ -94,7 +96,7 @@ app.post('/webhook/meta', async (req, res) => {
     const statuses = req.body?.entry?.[0]?.changes?.[0]?.value?.statuses;
     if (statuses) {
       for (const s of statuses) {
-        await WhatsappLog.findOneAndUpdate({ meta_message_id: s.id }, { $set: { status: s.status } }).catch(() => {});
+        await WhatsappLog.findOneAndUpdate({ meta_message_id: s.id }, { $set: { status: s.status } }).catch(() => { });
       }
     }
     res.sendStatus(200);
