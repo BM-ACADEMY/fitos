@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-gd-bg text-gd-text font-sans antialiased; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { @apply bg-gd-border rounded; }
+
+.input { @apply w-full bg-gd-bg border border-gd-border rounded-lg px-3 py-2 text-sm text-gd-text placeholder-gd-sub focus:border-gd-green focus:outline-none; }
+.btn { @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer disabled:opacity-50; }
+.btn-green { @apply btn bg-gd-green text-gd-bg hover:opacity-90; }
+.btn-outline { @apply btn bg-transparent text-gd-green border border-gd-green hover:bg-gd-green/10; }
+.btn-ghost { @apply btn bg-gd-border text-gd-sub hover:text-gd-text; }
+.card { @apply bg-gd-card border border-gd-border rounded-xl p-4; }
+.badge { @apply inline-block px-2 py-0.5 rounded text-xs font-medium; }
+.badge-green { @apply badge bg-gd-green/20 text-gd-green; }
+.badge-amber { @apply badge bg-gd-amber/20 text-gd-amber; }
+.badge-red { @apply badge bg-gd-red/20 text-gd-red; }
+.badge-blue { @apply badge bg-gd-blue/20 text-gd-blue; }
+.badge-purple { @apply badge bg-gd-purple/20 text-gd-purple; }
+.th { @apply text-left text-xs text-gd-sub font-medium py-2 px-3 border-b border-gd-border; }
+.td { @apply text-sm py-2 px-3 border-b border-gd-border/30; }
